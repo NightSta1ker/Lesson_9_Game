@@ -1,0 +1,608 @@
+@import "null.css";
+@import "fonts.css";
+/* -----------------------------------Произвольная домашка----------------------------------- */
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+body {
+	background-color: #f7e698;
+}
+.field {
+	background-image: url("../img/screen-1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: block;
+	margin: 10px auto;
+	width: 1320px;
+	height: 750px;
+	/* border: 1px solid #000; */
+	border-radius: 5px;
+}
+.first-block {
+	background-image: url("../img/snake-to-right.png");
+	width: 100px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position: center;
+	position: relative;
+	top: 34px;
+	left: 50px;
+}
+.first-block:hover + .first-block-2,
+.first-block-2:hover {
+	visibility: visible;
+}
+.first-block-2 {
+	background-image: url("../img/snake-top-right.png");
+	width: 80px;
+	height: 140px;
+	background-repeat: no-repeat;
+	background-size: 90%;
+	position: relative;
+	left: 150px;
+	visibility: hidden;
+	display: inline-block;
+}
+.first-block-2:hover + .second-block,
+.second-block:hover {
+	visibility: visible;
+}
+.second-block {
+	background-image: url("../img/long-to-down.png");
+	width: 40px;
+	height: 180px;
+	background-repeat: no-repeat;
+	background-size: 85%;
+	background-position: center;
+	visibility: hidden;
+	display: block;
+	position: relative;
+	top: -10px;
+	left: 186px;
+}
+
+.second-block:hover + .third-block,
+.third-block:hover {
+	visibility: visible;
+}
+.third-block {
+	background-image: url("../img/snake-right-bottom.png");
+	width: 120px;
+	height: 80px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top center;
+	visibility: hidden;
+	display: inline-block;
+	position: relative;
+	top: -55px;
+	left: 96px;
+	z-index: 1;
+}
+.third-block:hover + .fourth-block,
+.fourth-block:hover {
+	visibility: visible;
+}
+.fourth-block {
+	background-image: url("../img/snake-top-left.png");
+	width: 90px;
+	height: 125px;
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position: left;
+	visibility: hidden;
+	display: inline-block;
+	position: relative;
+	top: 35px;
+	left: -98px;
+}
+.fourth-block:hover + .fifth-block,
+.fifth-block:hover {
+	visibility: visible;
+}
+.fifth-block {
+	background-image: url("../img/snake-left-bottom.png");
+	width: 180px;
+	height: 120px;
+	background-repeat: no-repeat;
+	background-size: 70%;
+	background-position: left bottom;
+	visibility: hidden;
+	position: relative;
+	top: 30px;
+	left: 32px;
+}
+.fifth-block:hover + .sixth-block,
+.sixth-block:hover {
+	visibility: visible;
+}
+.sixth-block {
+	background-image: url("../img/long-to-right.png");
+	width: 200px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-size: 85%;
+	background-position: left center;
+	visibility: hidden;
+	position: relative;
+	top: -10px;
+	left: 180px;
+	display: inline-block;
+}
+.sixth-block:hover + .seventh-block,
+.seventh-block:hover {
+	visibility: visible;
+}
+.seventh-block {
+	background-image: url("../img/snake-bottom-right.png");
+	width: 100px;
+	height: 145px;
+	background-repeat: no-repeat;
+	background-size: 95%;
+	background-position: left;
+	visibility: hidden;
+	position: relative;
+	top: -158px;
+	left: 375px;
+	display: block;
+}
+.seventh-block:hover + .eighth-block,
+.eighth-block:hover {
+	visibility: visible;
+}
+.eighth-block {
+	background-image: url("../img/123.png");
+	width: 140px;
+	height: 150px;
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-position: left;
+	visibility: hidden;
+	position: relative;
+	top: -530px;
+	left: 452px;
+	display: inline-block;
+}
+.seventh-block:hover ~ .nineth-block,
+.nineth-block:hover {
+	visibility: visible;
+}
+.eighth-block:hover ~ .tenth-block,
+.tenth-block:hover {
+	visibility: visible;
+}
+.nineth-block {
+	display: inline-block;
+	background-image: url("../img/left-center-right-removebg-preview.png");
+	width: 155px;
+	height: 240px;
+	background-repeat: no-repeat;
+	background-size: 84%;
+	background-position: center;
+	visibility: hidden;
+	position: relative;
+	top: -540px;
+	left: 168px;
+}
+.seventh-block:hover ~ .yes,
+.yes:hover {
+	visibility: visible;
+}
+.yes {
+	background-image: url("../img/yes.gif");
+	width: 60px;
+	height: 60px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	visibility: hidden;
+	position: relative;
+	top: -700px;
+	left: 180px;
+	display: inline-block;
+}
+.seventh-block:hover ~ .no,
+.no:hover {
+	visibility: visible;
+}
+.no {
+	background-image: url("../img/No.gif");
+	width: 200px;
+	height: 200px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	visibility: hidden;
+	position: relative;
+	top: -650px;
+	left: 140px;
+	display: block;
+}
+.no::before {
+	content: "";
+	background-image: url("../img/pngwing.com.png");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: contain;
+	width: 100px;
+	height: 80px;
+	display: block;
+	position: relative;
+	right: -70px;
+	top: -25px;
+}
+.tenth-block {
+	display: inline-block;
+	background-image: url("../img/snake-to-down.png");
+	width: 42px;
+	height: 110px;
+	background-repeat: no-repeat;
+	background-size: 85%;
+	background-position: center;
+	visibility: hidden;
+	position: relative;
+	top: -780px;
+	left: 540px;
+}
+.tenth-block:hover ~ .eleven-block,
+.eleven-block:hover {
+	visibility: visible;
+}
+.eleven-block {
+	display: inline-block;
+	background-image: url("../img/snake-left-bottom-removebg-preview.png");
+	width: 155px;
+	height: 110px;
+	background-repeat: no-repeat;
+	background-size: 84%;
+	background-position: left;
+	visibility: hidden;
+	position: relative;
+	top: -680px;
+	left: 505px;
+}
+.eleven-block:hover ~ .twelfth-block,
+.twelfth-block:hover {
+	visibility: visible;
+}
+.twelfth-block {
+	display: inline-block;
+	background-image: url("../img/snake-bottom-right.png");
+	width: 100px;
+	height: 150px;
+	background-repeat: no-repeat;
+	background-size: 95%;
+	background-position: right;
+	visibility: hidden;
+	position: relative;
+	top: -680px;
+	left: 499px;
+}
+.twelfth-block:hover ~ .thirteen-block,
+.thirteen-block:hover {
+	visibility: visible;
+}
+.thirteen-block {
+	display: inline-block;
+	background-image: url("../img/snake-right-top.png");
+	width: 100px;
+	height: 100px;
+	background-repeat: no-repeat;
+	background-size: 95%;
+	background-position: right;
+	visibility: hidden;
+	position: relative;
+	top: -828px;
+	left: 390px;
+	z-index: 100;
+}
+.kek {
+	background-image: url("../img/tonque.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 170px;
+	height: 140px;
+	position: relative;
+	top: -1100px;
+	left: 950px;
+	z-index: 101;
+	visibility: hidden;
+}
+.lol {
+	background-image: url("../img/lmao.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 200px;
+	height: 130px;
+	position: relative;
+	top: -1080px;
+	left: 830px;
+	z-index: 101;
+	visibility: hidden;
+}
+.twelfth-block:hover ~ .kek,
+.kek:hover {
+	visibility: visible;
+}
+.twelfth-block:hover ~ .lol,
+.lol:hover {
+	visibility: visible;
+}
+.game-over {
+	width: 1320px;
+	height: 750px;
+	background-color: rgba(168, 168, 168, 0.5);
+	background-image: url("../img/game-over.gif");
+	background-repeat: no-repeat;
+	background-position: center 170px;
+	position: absolute;
+	top: 10px;
+	z-index: 100;
+	visibility: hidden;
+}
+.thirteen-block:hover ~ .game-over,
+.game-over:hover {
+	visibility: visible;
+}
+.fourteenth-block {
+	display: inline-block;
+	background-image: url("../img/long-left-right.png");
+	width: 190px;
+	height: 230px;
+	background-repeat: no-repeat;
+	background-size: 92%;
+	background-position: top;
+	visibility: hidden;
+	position: relative;
+	top: -1630px;
+	left: 308px;
+}
+.nineth-block:hover ~ .fourteenth-block,
+.fourteenth-block:hover {
+	visibility: visible;
+}
+.fifteenth-block {
+	display: inline-block;
+	background-image: url("../img/long-to-right.png");
+	width: 210px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-size: 97%;
+	background-position: center;
+	visibility: hidden;
+	position: relative;
+	top: -1812px;
+	left: 303px;
+}
+.fourteenth-block:hover ~ .fifteenth-block,
+.fifteenth-block:hover {
+	visibility: visible;
+}
+.sixteenth-block {
+	display: inline-block;
+	background-image: url("../img/long-top-right.png");
+	width: 260px;
+	height: 200px;
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-position: center;
+	visibility: hidden;
+	position: relative;
+	top: -1670px;
+	left: 290px;
+}
+.fifteenth-block:hover ~ .sixteenth-block,
+.sixteenth-block:hover {
+	visibility: visible;
+}
+.seventeenth-block {
+	display: block;
+	background-image: url("../img/long-to-down.png");
+	width: 50px;
+	height: 235px;
+	background-repeat: no-repeat;
+	background-size: 94%;
+	background-position: center;
+	visibility: hidden;
+	position: relative;
+	top: -1675px;
+	left: 897px;
+}
+.sixteenth-block:hover ~ .seventeenth-block,
+.seventeenth-block:hover {
+	visibility: visible;
+}
+.eighteenth-block {
+	display: inline-block;
+	background-image: url("../img/snake-left-bottom-short.png");
+	width: 140px;
+	height: 115px;
+	background-repeat: no-repeat;
+	background-size: 94%;
+	background-position: left;
+	visibility: hidden;
+	position: relative;
+	top: -1681px;
+	left: 925px;
+}
+.seventeenth-block:hover ~ .eighteenth-block,
+.eighteenth-block:hover {
+	visibility: visible;
+}
+.nineteenth-block {
+	display: inline-block;
+	background-image: url("../img/snake-to-down.png");
+	width: 50px;
+	height: 120px;
+	background-repeat: no-repeat;
+	background-size: 94%;
+	background-position: right;
+	visibility: hidden;
+	position: relative;
+	top: -1678px;
+	left: 730px;
+}
+.seventeenth-block:hover ~ .nineteenth-block,
+.nineteenth-block:hover {
+	visibility: visible;
+}
+.seventeenth-block:hover ~ .yes-2,
+.yes-2:hover {
+	visibility: visible;
+}
+.yes-2 {
+	background-image: url("../img/yes-2.gif");
+	width: 170px;
+	height: 150px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: left;
+	visibility: hidden;
+	position: relative;
+	top: -1960px;
+	left: 720px;
+	display: block;
+}
+.yes-2::after {
+	content: "";
+	background-image: url("../img/pngwing-2.png");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: contain;
+	width: 100px;
+	height: 80px;
+	display: block;
+	position: relative;
+	right: -55px;
+	top: 145px;
+}
+.seventeenth-block:hover ~ .no-2,
+.no-2:hover {
+	visibility: visible;
+}
+.no-2 {
+	background-image: url("../img/no-2.gif");
+	width: 170px;
+	height: 170px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	visibility: hidden;
+	position: relative;
+	top: -2150px;
+	left: 1000px;
+	display: block;
+}
+.no-2::after {
+	content: "";
+	background-image: url("../img/pngwing-3.png");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: contain;
+	width: 100px;
+	height: 80px;
+	display: block;
+	position: relative;
+	right: 0px;
+	top: 165px;
+}
+.twentieth {
+	display: block;
+	background-image: url("../img/long-to-right.png");
+	width: 225px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	visibility: hidden;
+	position: relative;
+	top: -2057px;
+	left: 1060px;
+}
+.twentieth:hover ~ .lose-again,
+.lose-again:hover {
+	visibility: visible;
+}
+.lose-again {
+	width: 1320px;
+	height: 750px;
+	background: url("../img/try-again.gif") center 45px / 400px 150px no-repeat,
+		url("../img/noo.gif") center 210px / 400px 500px no-repeat, rgba(168, 168, 168, 0.5);
+	position: absolute;
+	top: 10px;
+	z-index: 100;
+	visibility: hidden;
+}
+.eighteenth-block:hover ~ .twentieth,
+.twentieth:hover {
+	visibility: visible;
+}
+.twenty-first {
+	display: block;
+	background-image: url("../img/snake-left-bottom-short.png");
+	width: 140px;
+	height: 115px;
+	background-repeat: no-repeat;
+	background-size: 94%;
+	background-position: left;
+	visibility: hidden;
+	position: relative;
+	top: -2055px;
+	left: 888px;
+}
+.nineteenth-block:hover ~ .twenty-first,
+.twenty-first:hover {
+	visibility: visible;
+}
+.twenty-two {
+	display: block;
+	background-image: url("../img/snake-top-right-short.png");
+	width: 110px;
+	height: 100px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top;
+	visibility: hidden;
+	position: relative;
+	top: -2100px;
+	left: 1027px;
+	z-index: 2;
+}
+.twenty-first:hover ~ .twenty-two,
+.twenty-two:hover {
+	visibility: visible;
+}
+.finish {
+	background-image: url("../img/door.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: 150px;
+	height: 150px;
+	position: relative;
+	display: block;
+	top: -2200px;
+	left: 1040px;
+}
+.winner {
+	width: 1320px;
+	height: 750px;
+	background-color: rgba(125, 236, 81, 0.5);
+	background: url("../img/Winner-3.gif") center top/300px 170px no-repeat,
+		url("../img/Winner-5.gif") 1000px 200px/150px 150px no-repeat,
+		url("../img/Winner-2.gif") 150px center / 150px 150px no-repeat,
+		url("../img/Winner-2.gif") 1050px 500px / 150px 150px no-repeat, url("../img/Winner.gif") center 150px no-repeat,
+		rgba(125, 236, 81, 0.5);
+	position: absolute;
+	top: 10px;
+	z-index: 100;
+	visibility: hidden;
+}
+.twenty-two:hover ~ .winner,
+.winner:hover {
+	visibility: visible;
+}
